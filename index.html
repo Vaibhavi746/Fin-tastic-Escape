@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fin-tastic Escape</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div id="game-container">
+        <div id="fish"></div>
+        <div class="pipe pipe-top" ></div>
+        <div class="pipe pipe-bottom"></div>
+        <div id="sea-floor"></div>
+        <div id="score">0</div>
+        <div id="start-screen">Tap to Start</div>
+        <div id="game-over" style="display:none;">Game Over
+            <button id="reset-button">Restart Game</button>
+        </div>
+        <audio id="bg-music" src="ocean.mp3" loop></audio>
+        <button id="sound-btn" class="sound-on"></button>
+        <audio id="bubble-sound" src="bubble.mp3"></audio>   
+     </div>
+     
+    <script src="script.js"></script>
+</body>
+</html>

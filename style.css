@@ -1,0 +1,152 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+  #game-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #00bfff, #1e90ff, #000080);
+} 
+
+#fish {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  width: 80px;
+  height: 80px;
+  background: url('fish.png') no-repeat center/contain;
+}
+
+
+/* Score */
+#score {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    z-index: 999;
+}
+
+/* Start Screen */
+#start-screen {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: yellow;
+    text-shadow: 2px 2px 5px black;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* Game Over Screen */
+#game-over {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 3px 3px 8px black;
+    display: none;
+    z-index: 999;
+}
+
+/* pipe obstacle */
+.pipe {
+    position: absolute;
+    width: 80px;           /* pipe width */
+    /* height: 350px;        not needed as we have adjusted dynamically   */
+    background-image: url('pipe.png');  /* make sure exact filename */
+    background-size: cover;           /* scale image to fill div */
+    background-repeat: no-repeat;     /* don’t tile */
+    background-position: center;      /* center the image */
+    border: none;                     /* remove any border if not needed */
+    z-index: 5;
+    /* left:60%; */
+}
+
+/* Top Pipe (flipped) */
+.pipe-top {
+    /* height:350px; */
+    top: 0;
+ 
+}
+
+/* Bottom Pipe */
+.pipe-bottom {
+    bottom: 0;
+    /* height:350px; */
+    transform: rotate(180deg);  /* upside down */
+}
+
+#sound-btn {
+    width: 80px;
+    height: 80px;
+    border: none;             /* remove border */
+    background: none;         /* remove default background */
+    cursor: pointer;
+    background-size: cover;    /* scale image to fill button */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+    outline: none;            /* remove focus outline on click */
+}
+
+
+/* Sound On icon */
+#sound-btn.sound-on {
+    background-image: url('sound-on.png'); /* green speaker icon */
+    background-size: 100% 100%;
+}
+
+/* Sound Off icon */
+#sound-btn.sound-off {
+    background-image: url('sound-off.png'); /* muted speaker icon */
+    background-size: 55% 55%;
+}
+
+/* Sea floor */
+#sea-floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem; /* adjustable */
+  background: url('floor.jpeg') repeat-x; /* your seabed image */
+  background-size: contain; /* scales to fit nicely */
+  z-index: 10;
+}
+
+/* Style for the Restart Button */
+#reset-button {
+    display: block; /* Makes the button take up its own line */
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #4c97e9db; /* Blue background */
+    border: 3px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s;
+}
+
+#reset-button:hover {
+    background-color: #020084; /* Darker blue on hover */
+}
